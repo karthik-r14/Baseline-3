@@ -21,4 +21,8 @@ public class Item {
 
         return input.contains("imported");
     }
+
+    public boolean OmitTax() {
+        return input.contains("chocolate");
+    }
 }

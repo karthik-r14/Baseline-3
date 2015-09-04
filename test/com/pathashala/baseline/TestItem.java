@@ -13,4 +13,20 @@ public class TestItem {
         assertEquals(item.isImported(), false);
     }
 
+    @Test
+    public void shouldReturnTrueWhenItemIsImported() {
+        Item item = new Item("1 imported bottle of perfume at 27.99");
+
+        assertEquals(item.isImported(), true);
+    }
+
+    @Test
+    public void shouldOmitTaxWhenItemIsFood() {
+
+        Item item = new Item("1 chocolate bar at 0.85");
+
+        assertEquals(item.OmitTax(), true);
+    }
+
+
 }
