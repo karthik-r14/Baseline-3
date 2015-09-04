@@ -22,11 +22,15 @@ public class TestItem {
 
     @Test
     public void shouldOmitTaxWhenItemIsFood() {
-
         Item item = new Item("1 chocolate bar at 0.85");
 
         assertEquals(item.OmitTax(), true);
     }
 
+    @Test
+    public void shouldOmitTaxWhenItemIsMedicalProduct() {
+        Item item = new Item("1 packet of headache pills at 9.75");
 
+        assertEquals(item.OmitTax(), true);
+    }
 }

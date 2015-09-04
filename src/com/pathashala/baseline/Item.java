@@ -12,17 +12,19 @@ public class Item {
     }
 
     private void retriveCost(String input) {
-       String [] tempInput = input.split(" ");
-       int length = tempInput.length;
-        cost = Double.parseDouble(tempInput[length-1]);
+        String[] tempInput = input.split(" ");
+        int length = tempInput.length;
+        cost = Double.parseDouble(tempInput[length - 1]);
     }
 
     public boolean isImported() {
-
         return input.contains("imported");
     }
 
     public boolean OmitTax() {
-        return input.contains("chocolate");
+        if (input.contains("chocolate") || input.contains("pills"))
+            return true;
+        else
+            return false;
     }
 }
