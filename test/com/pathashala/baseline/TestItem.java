@@ -47,4 +47,12 @@ public class TestItem {
 
         assertEquals(0.0, item.computeTax(), 0.0);
     }
+
+    @Test
+    public void shouldReturnImportTaxWhenItemIsItemIsPassed() {
+        Item item = new Item("1 imported box of chocolates at 10.00");
+
+        assertEquals(0.50, item.computeTax(), 0.0);
+    }
 }
+
