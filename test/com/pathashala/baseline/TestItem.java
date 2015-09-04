@@ -33,4 +33,12 @@ public class TestItem {
 
         assertEquals(item.OmitTax(), true);
     }
+
+    @Test
+    public void shouldOmitTaxWhenItemIsABook() {
+        Item item = new Item("1 book at 12.49");
+
+        assertEquals(item.OmitTax(), true);
+    }
+
 }

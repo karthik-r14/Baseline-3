@@ -1,3 +1,4 @@
+//An Item has a cost and determines whether importTax,salesTax is levied on it or not
 package com.pathashala.baseline;
 
 public class Item {
@@ -22,7 +23,7 @@ public class Item {
     }
 
     public boolean OmitTax() {
-        if (input.contains("chocolate") || input.contains("pills"))
+        if (input.contains("chocolate") || input.contains("pills") || input.contains("book"))
             return true;
         else
             return false;
