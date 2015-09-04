@@ -41,4 +41,10 @@ public class TestItem {
         assertEquals(item.OmitTax(), true);
     }
 
+    @Test
+    public void shouldReturnTaxAsZeroWhenItemIsAFoodAndNotImportedItem() {
+        Item item= new Item("1 book at 12.49");
+
+        assertEquals(0.0, item.computeTax(), 0.0);
+    }
 }
